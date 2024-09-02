@@ -39,7 +39,7 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
-                "allowTargetBlank": false,
+                "allowTargetBlank": true,
                 "select": null
               }
             },
