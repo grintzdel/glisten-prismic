@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: home.data.meta_title || undefined,
       images: [
         {
-          url: home.data.meta_image.url || ""
+          url: home.data.fallback_og_image || ""
         }
       ]
     }
