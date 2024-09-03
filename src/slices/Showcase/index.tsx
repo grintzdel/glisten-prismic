@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 const icons = {
   gear: <PiGear />,
-  cycle: <PiArrowsClockwise />,
+  cycle: <PiArrowsClockwise />
 };
 
 /**
@@ -36,11 +36,12 @@ const Showcase = ({ slice }: ShowcaseProps): JSX.Element => {
             <h2 className="text-balance text-center text-5xl font-medium md:text-7xl">
               {children}
             </h2>
-          ),
+          )
         }}
       />
 
-      <div className="mt-16 grid items-center rounded-xl border border-blue-50/20 bg-gradient-to-b from-slate-50/15 to-slate-50/5 px-8 py-8 backdrop-blur-sm lg:grid-cols-3 lg:py-12">
+      <div
+        className="mt-16 grid items-center rounded-xl border border-blue-50/20 bg-gradient-to-b from-slate-50/15 to-slate-50/5 px-8 py-8 backdrop-blur-sm lg:grid-cols-3 lg:py-12">
         <div className="mb-8 lg:mb-0">
           <div className="w-fit rounded-lg bg-gradient-to-t from-yellow-500/50 to-yellow-300 p-4 text-3xl">
             {slice.primary.icon && icons[slice.primary.icon]}
@@ -65,7 +66,7 @@ const Showcase = ({ slice }: ShowcaseProps): JSX.Element => {
             "opacity-90 shadow-2xl lg:col-span-2 lg:pt-0",
             slice.variation === "reverse"
               ? "lg:order-1 lg:translate-x-[15%]"
-              : "lg:-order-1 lg:translate-x-[-15%]",
+              : "lg:-order-1 lg:translate-x-[-15%]"
           )}
         />
       </div>
