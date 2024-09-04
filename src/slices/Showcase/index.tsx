@@ -1,6 +1,6 @@
 import Bounded from "@/components/Bounded";
 import ButtonLink from "@/components/ButtonLink";
-import { PiArrowsClockwise, PiGear } from "react-icons/pi";
+import { PiArrowsClockwise, PiGear, PiCursorClick } from "react-icons/pi";
 
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -9,7 +9,8 @@ import clsx from "clsx";
 
 const icons = {
   gear: <PiGear />,
-  cycle: <PiArrowsClockwise />
+  cycle: <PiArrowsClockwise />,
+  cursor: <PiCursorClick />
 };
 
 /**

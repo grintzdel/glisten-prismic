@@ -36,7 +36,8 @@
             "placeholder": "Icons selector",
             "options": [
               "gear",
-              "cycle"
+              "cycle",
+              "cursor"
             ],
             "default_value": "gear"
           }
@@ -110,7 +111,8 @@
             "placeholder": "Icons selector",
             "options": [
               "gear",
-              "cycle"
+              "cycle",
+              "cursor"
             ],
             "default_value": "gear"
           }

@@ -402,7 +402,7 @@ export interface ShowcaseSliceDefaultPrimary {
    * - **API ID Path**: showcase.default.primary.icon
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  icon: prismic.SelectField<"gear" | "cycle", "filled">;
+  icon: prismic.SelectField<"gear" | "cycle" | "cursor", "filled">;
 
   /**
    * Subheading field in *Showcase → Default → Primary*
@@ -491,7 +491,7 @@ export interface ShowcaseSliceReversePrimary {
    * - **API ID Path**: showcase.reverse.primary.icon
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  icon: prismic.SelectField<"gear" | "cycle", "filled">;
+  icon: prismic.SelectField<"gear" | "cycle" | "cursor", "filled">;
 
   /**
    * Subheading field in *Showcase → Reverse → Primary*
