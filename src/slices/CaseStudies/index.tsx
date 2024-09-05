@@ -62,7 +62,7 @@ const CaseStudies = async ({ slice }: CaseStudiesProps): Promise<JSX.Element> =>
               </div>
 
               <PrismicNextImage field={caseStudy.data.logo_image} quality={100}
-                                className={clsx("rounded-xl lg:col-span-2", index % 2 && "md:-order-1")} />
+                                className={clsx("rounded-xl lg:col-span-2", index % 2 && "-order-1")} />
 
             </div>
           )
