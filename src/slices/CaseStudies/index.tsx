@@ -4,6 +4,7 @@ import { createClient } from "@/prismicio";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import clsx from "clsx";
 import Bounded from "@/components/Bounded";
+import { RichTextField } from "@prismicio/types";
 
 /**
  * Props for `CaseStudies`.
@@ -34,7 +35,7 @@ const CaseStudies = async ({ slice }: CaseStudiesProps): Promise<JSX.Element> =>
     >
 
       <h2 className="max-w-2xl text-balance text-center text-5xl font-medium md:text-7xl">
-        <PrismicText field={slice.primary.heading} />
+        <PrismicText field={slice.primary.heading as RichTextField} />
       </h2>
 
       <div className="mx-auto mt-6 max-w-md text-balance text-center text-slate-300">
