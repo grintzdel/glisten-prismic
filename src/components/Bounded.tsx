@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { deflate } from "node:zlib";
 
 type BoundedProps = {
   as?: React.ElementType;
