@@ -1,9 +1,12 @@
 import clsx from "clsx";
+import { deflate } from "node:zlib";
 
 type BoundedProps = {
   as?: React.ElementType;
   className?: string;
   children: React.ReactNode;
+  'data-slice-type'?: string;
+  'data-slice-variation'?: string;
 };
 
 export default function Bounded({
