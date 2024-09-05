@@ -49,7 +49,7 @@ const CaseStudies = async ({ slice }: CaseStudiesProps): Promise<JSX.Element> =>
                  className="relative grid gap-4 opacity-85 transition-opacity duration-300 hover:cursor-pointer hover:opacity-100 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
               <div className="flex col-psan-1 flex-col justify-center gap-4">
                 <h3 className="text-4xl">
-                  <PrismicText field={caseStudy.data.company} />
+                  <PrismicText field={caseStudy.data.company as RichTextField} />
                 </h3>
 
                 <div className="max-w-md">
@@ -57,7 +57,7 @@ const CaseStudies = async ({ slice }: CaseStudiesProps): Promise<JSX.Element> =>
                 </div>
 
                 <PrismicNextLink document={caseStudy} className="after:absolute after:inset-0 hover:underline">
-                  Read <PrismicText field={caseStudy.data.company} /> case study
+                  Read <PrismicText field={caseStudy.data.company as RichTextField} /> case study
                 </PrismicNextLink>
               </div>
 
