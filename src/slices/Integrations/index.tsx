@@ -1,17 +1,19 @@
 import { Content } from "@prismicio/client";
-import { PrismicRichText, PrismicText, SliceComponentProps } from "@prismicio/react";
+import {
+  PrismicRichText,
+  PrismicText,
+  SliceComponentProps,
+} from "@prismicio/react";
 
 import Bounded from "@/components/Bounded";
 import StarBackground from "@/slices/Integrations/StarBackground";
-import StylizedLogoMark from "@/slices/Integrations/StylizedLogoMark";
 
 import Image, { StaticImageData } from "next/image";
 import background from "./background.jpg";
 import { RichTextField } from "@prismicio/types";
 import React from "react";
 
-import { FaDigitalOcean, FaCloudflare, FaNpm, FaGithub, FaFigma, FaFly } from "react-icons/fa6";
-import clsx from "clsx";
+import AnimatedContent from "./AnimatedContent";
 
 /**
  * Props for `Integrations`.
@@ -22,24 +24,19 @@ export type IntegrationsProps = SliceComponentProps<Content.IntegrationsSlice>;
  * Component for "Integrations" Slices.
  */
 const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
-
-  const icons = {
-    digitalocean: <FaDigitalOcean />,
-    cloudflare: <FaCloudflare />,
-    npm: <FaNpm />,
-    github: <FaGithub />,
-    figma: <FaFigma />,
-    fly: <FaFly />
-  };
-
   return (
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="relative overflow-hidden"
     >
-
-      <Image src={background as StaticImageData} alt="" fill className="object-cover" quality={90} />
+      <Image
+        src={background as StaticImageData}
+        alt=""
+        fill
+        className="object-cover"
+        quality={90}
+      />
       <StarBackground />
 
       <div className="relative">
@@ -51,26 +48,7 @@ const Integrations = ({ slice }: IntegrationsProps): JSX.Element => {
           <PrismicRichText field={slice.primary.body} />
         </div>
 
-        <div className="mt-20 flex flex-col items-center md:flex-row">
-          {slice.primary.integrations_icons.map((item, index) => (
-            <React.Fragment key={index}>
-              {index === Math.floor(slice.primary.integrations_icons.length / 2) && (
-                <>
-                  <StylizedLogoMark />
-                  <div className="signal-line rotate-180 bg-gradient-to-t" />
-                </>
-              )}
-              <div
-                className="pulsing-icon flex aspect-square shrink-0 items-center justify-center rounded-full border border-blue-50/30 bg-blue-50/25 p-3 text-3xl text-blue-100 opacity-90 md:text-4xl lg:text-5xl">
-                {item.icon && icons[item.icon]}
-              </div>
-              {index !== slice.primary.integrations_icons.length - 1 && (
-                <div
-                  className={clsx("signal-line", index >= Math.floor(slice.primary.integrations_icons.length / 2) ? "rotate-180" : "rotate-0")} />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+        <AnimatedContent slice={slice} />
       </div>
     </Bounded>
   );
