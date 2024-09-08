@@ -41,6 +41,13 @@ export default function AnimatedContent({
 
   useGSAP(
     () => {
+      if (prefersReducedMotion) {
+        gsap.set(".pulsing-logo, .signal-logo, .signal-line, .pulsing-icon", {
+          opacity: 1,
+        });
+        return;
+      }
+
       const tl = gsap.timeline({
         repeat: -1,
         defaults: {
