@@ -17,10 +17,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: home.data.meta_title || undefined,
       images: [
         {
-          url: home.data.fallback_og_image || ""
-        }
-      ]
-    }
+          url: home.data.meta_image.url || "",
+        },
+      ],
+    },
   };
 }
 
